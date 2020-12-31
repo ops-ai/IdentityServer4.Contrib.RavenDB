@@ -1,5 +1,11 @@
 # IdentityServer 4 RavenDB stores
 
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=ops-ai_identityserver4-ravendb&metric=alert_status)](https://sonarcloud.io/dashboard?id=ops-ai_identityserver4-ravendb)
+[![Build Status](https://opsai.visualstudio.com/BeyondAuth/_apis/build/status/ops-ai.IdentityServer4.Contrib.RavenDB?branchName=develop)](https://opsai.visualstudio.com/BeyondAuth/_build/latest?definitionId=4&branchName=develop)
+[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=ops-ai_identityserver4-ravendb&metric=vulnerabilities)](https://sonarcloud.io/dashboard?id=ops-ai_identityserver4-ravendb)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=ops-ai_identityserver4-ravendb&metric=coverage)](https://sonarcloud.io/dashboard?id=ops-ai_identityserver4-ravendb)
+![CodeQL](https://github.com/ops-ai/IdentityServer4.Contrib.RavenDB/workflows/CodeQL/badge.svg)
+
 ### Enable Document Expiration
 ```
 await store.Maintenance.SendAsync(new ConfigureExpirationOperation(new ExpirationConfiguration
