@@ -6,6 +6,9 @@
 [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=ops-ai_identityserver4-ravendb&metric=coverage)](https://sonarcloud.io/dashboard?id=ops-ai_identityserver4-ravendb)
 ![CodeQL](https://github.com/ops-ai/IdentityServer4.Contrib.RavenDB/workflows/CodeQL/badge.svg)
 
+[![NuGet Status](https://img.shields.io/nuget/v/IdentityServer4.Contrib.RavenDB.svg?style=flat)](https://www.nuget.org/packages/IdentityServer4.Contrib.RavenDB/)
+[![NuGet Count](https://img.shields.io/nuget/dt/IdentityServer4.Contrib.RavenDB.svg)](https://www.nuget.org/packages/IdentityServer4.Contrib.RavenDB/)
+
 ### Enable Document Expiration
 ```
 await store.Maintenance.SendAsync(new ConfigureExpirationOperation(new ExpirationConfiguration
