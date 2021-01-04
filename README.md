@@ -13,8 +13,8 @@
 ```
 await store.Maintenance.SendAsync(new ConfigureExpirationOperation(new ExpirationConfiguration
 {
-             Disabled = false,
-             DeleteFrequencyInSec = 60
+    Disabled = false,
+    DeleteFrequencyInSec = 60
 }));
 ```
 
