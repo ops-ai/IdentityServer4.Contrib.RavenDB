@@ -28,7 +28,7 @@ namespace IdentityServer4.Contrib.RavenDB.Services
             {
                 var isAllowed = await session.Query<Client>().AnyAsync(t => t.AllowedCorsOrigins.Any(c => c == origin)).ConfigureAwait(false);
 
-                _logger.LogDebug("Origin {origin} is allowed: {originAllowed}", origin, isAllowed);
+                _logger.LogDebug($"Origin {origin} is allowed: {isAllowed}");
 
                 return isAllowed;
             }
