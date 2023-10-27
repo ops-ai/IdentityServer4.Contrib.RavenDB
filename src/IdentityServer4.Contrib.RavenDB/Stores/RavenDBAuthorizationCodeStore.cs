@@ -56,7 +56,7 @@ namespace IdentityServer4.Contrib.RavenDB.Stores
 
             using (var session = _store.OpenAsyncSession(_identityStoreOptions?.Value.DatabaseName))
             {
-                var newCode = ShortId.Generate(new GenerationOptions { Length = 14, UseNumbers = true, UseSpecialCharacters = false });
+                var newCode = ShortId.Generate(new GenerationOptions(true, false, 14));
                 _logger.LogDebug($"Storing authorization code {code}");
                 await session.StoreAsync(code, $"AuthorizationCodes/{newCode}").ConfigureAwait(false);
                 await session.SaveChangesAsync().ConfigureAwait(false);

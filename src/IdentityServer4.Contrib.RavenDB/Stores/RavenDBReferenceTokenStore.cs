@@ -74,7 +74,7 @@ namespace IdentityServer4.Contrib.RavenDB.Stores
 
             using (var session = _store.OpenAsyncSession(_identityStoreOptions?.Value.DatabaseName))
             {
-                var newCode = ShortId.Generate(new GenerationOptions { Length = 14, UseNumbers = true, UseSpecialCharacters = false });
+                var newCode = ShortId.Generate(new GenerationOptions(true, false, 14));
                 _logger.LogDebug($"Storing reference token {newCode}");
                 await session.StoreAsync(token, $"ReferenceTokens/{newCode}").ConfigureAwait(false);
                 await session.SaveChangesAsync().ConfigureAwait(false);
